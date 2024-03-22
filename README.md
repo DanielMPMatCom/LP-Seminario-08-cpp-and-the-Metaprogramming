@@ -1,1 +1,1 @@
-# LP-Semianrio08-cpp-and-the-Metaprogramming
+# LP-Seminario08-cpp-and-the-Metaprogramming
