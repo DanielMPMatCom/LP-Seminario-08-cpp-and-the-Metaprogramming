@@ -1,6 +1,6 @@
 #include <iostream>
 
-// A Point class that can be instantiated at compile time
+//Clase Point que puede ser instanciada en tiempo de compilación
 class Point {
 public:
     constexpr Point(int x, int y) : m_x(x), m_y(y) {}
@@ -13,19 +13,19 @@ private:
     int m_y;
 };
 
-// An instance of a Point object that is created at compile time
+//Instancia de Point que puede ser creada en tiempo de compilación
 constexpr Point p1(5, 10);
-// Another instance of a Point object that is created at compile time
+//Otra instancia de Point que es creada en tiempo de compilación
 constexpr Point p2(5, 20);
 
 
-// Get the midpoint between two points
+// Obtener el punto medio entre dos puntos
 constexpr Point midPoint(const Point& p1, const Point& p2)
 {
     return Point((p1.getX() + p2.getX()) / 2, (p1.getY() + p2.getY()) / 2);
 }
 
-// Midpoint between p1 and p2 is calculated at compile time
+// El punto medio entre p1 y p2 es calculado en tiempo de compilación
 constexpr Point p = midPoint(p1, p2);
 
 
