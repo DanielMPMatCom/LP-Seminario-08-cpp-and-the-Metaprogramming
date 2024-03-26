@@ -2,25 +2,21 @@
 
 using namespace std;
 
-template<int N>
-struct Fibonacci {
-    static const int value = Fibonacci<N - 1>::value + Fibonacci<N - 2>::value;
-};
+constexpr int Fib(const int& n)
+{
+    if(n == 0)
+        return 0;
+    
+    if(n == 1)
+        return 1;
+    
+    return Fib(n-1) + Fib(n-2);
+}
 
-template<>
-struct Fibonacci<0> {
-    static const int value = 0;
-};
-
-template<>
-struct Fibonacci<1> {
-    static const int value = 1;
-};
-
-constexpr int val = 5;
-int fib = Fibonacci<val>::value;  // fib5 es 5
+constexpr int value = 7;
+constexpr int fibo = Fib(value);
 
 int main()
 {
-    cout << fib;
+    cout << fibo;
 }

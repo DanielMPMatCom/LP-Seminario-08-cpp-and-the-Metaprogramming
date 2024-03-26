@@ -136,5 +136,3 @@ switch (int i = rand() % 20 + 1; i) {
 La utilidad de una funcionalidad como _switch (init; condition)_ en `C#` puede depender de varios factores, incluyendo el estilo de programación y los requisitos del proyecto, entre las utilidades tenemos que al igual que en `C++`, esta característica podría ayudar a limitar el alcance de las variables en `C#`, lo que puede hacer que el código sea más limpio y fácil de entender, además `C#` ya tiene una sintaxis similar en sus bucles `for`, por lo que los desarrolladores podrían encontrar útil y coherente tener la misma funcionalidad en `switch`. Sin embargo, la necesidad de esta característica puede no ser tan alta en `C#`, ya que el lenguaje ya ofrece otras construcciones poderosas para el control de flujo, como `if`, `else if`, `switch`, `foreach`, y `using`, que pueden cubrir la mayoría de los casos de uso.
 
 - Exponga brevemente otras 2 propuestas al lenguaje que le parezcan atractivas.
-
-
