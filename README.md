@@ -137,4 +137,37 @@ La utilidad de una funcionalidad como _switch (init; condition)_ en `C#` puede d
 
 - Exponga brevemente otras 2 propuestas al lenguaje que le parezcan atractivas.
 
+##### 1. 
+Las expresiones plegables son una característica introducida en C++17 que permite realizar operaciones con paquetes de parámetros de plantillas. Un paquete de parámetros es una lista de parámetros de plantilla que puede tener un número variable de argumentos. Las expresiones plegables proporcionan una forma concisa de aplicar un operador a todos los elementos de un paquete de parámetros. Por ejemplo, si tienes una función de plantilla variadica que acepta un número arbitrario de argumentos, puedes sumar todos los argumentos con una expresión plegable:
 
+``` cpp
+template<typename... Args>
+auto sum(Args... args) {
+    return (... + args); // Expresión plegable
+}
+```
+
+En este caso, (... + args) es una expresión plegable que expande el paquete de parámetros args aplicando el operador + a cada argumento. Las expresiones plegables pueden ser de dos tipos: unarios y binarios. Los pliegues unarios a izquierda y derecha se conocen como pliegues unarios. En un pliegue unario, la expresión debe contener un paquete de parámetros sin expandir.
+
+Ver expresiones_plegables.cpp
+
+##### 2.
+El fallthrough es un atributo introducido en C++17 que se utiliza en las declaraciones de switch para indicar que la “caída” (o “fallthrough”) de un caso a otro es intencional. En C++, cuando se ejecuta un caso en una declaración de switch y no se encuentra una declaración de break, el control “cae” al siguiente caso. Este comportamiento puede introducir errores si no es intencional, por lo que algunos compiladores y analizadores estáticos emiten una advertencia en este caso. El atributo fallthrough se utiliza para especificar en el código que esta “caída” es intencional y no debe generar una advertencia.
+
+Ejemplo del uso de fallthrough:
+``` cpp
+switch (device.status) {
+    case sleep:
+        device.wake();
+        [[fallthrough]]; // Indica que la caída al siguiente caso es intencional
+    case ready:
+        device.run();
+        break;
+    case bad:
+        handle_error();
+        break;
+    default:
+        break;
+}
+```
+En este ejemplo, si el estado del dispositivo es sleep, va a llamar a wake() y luego va a verificar el estado ready.
