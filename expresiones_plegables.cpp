@@ -1,6 +1,6 @@
 #include <iostream>
 
-// Función de plantilla variadica que utiliza una expresión plegable
+// Función de plantilla variádica que utiliza una expresión plegable
 template<typename... Args>
 auto sum(Args... args) {
     return (... + args); // Expresión plegable
