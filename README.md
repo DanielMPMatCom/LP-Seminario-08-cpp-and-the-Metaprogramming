@@ -1,5 +1,7 @@
 # C++ y la Metaprogramación
 
+![Image](images/image.jpeg)
+
 ### 1 Implemente utilizando **TMP** (_Template Metaprogramming_) de `C++`:
 
 - Un algoritmo que calcule en tiempo de **COMPILACIÓN** el n-ésimo valor de la secuencia de _Fibonnacci_.
